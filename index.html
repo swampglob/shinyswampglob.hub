@@ -24,6 +24,9 @@
 
     <script>
     var myaudio = document.getElementById("audioID");
+    
+    let audio = document.getElementById("audioID");
+    audio.volume = 0.3;
 
     function PlayStop() { 
     return myaudio.paused ? myaudio.play() : myaudio.pause();
