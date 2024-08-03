@@ -19,14 +19,14 @@
     <button onclick="PlayStop()" type="button">▶</button>
 
 
-    <audio id="audioID" autoplay loop> <source src="assets/1993.mp3"  type="audio/mp3"> 
+    <audio id="audioID"> <source src="assets/shiny_playlist.mp3"  type="audio/mp3"> 
     </audio>
 
     <script>
     var myaudio = document.getElementById("audioID");
     
     let audio = document.getElementById("audioID");
-    audio.volume = 0.3;
+    audio.volume = 0.4;
 
     function PlayStop() { 
     return myaudio.paused ? myaudio.play() : myaudio.pause();
