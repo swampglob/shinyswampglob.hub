@@ -26,10 +26,12 @@ header {
   height: calc(120px + 32px);
 }
 
-audio {
-  bottom: 25px; 
+button {
+  width: 45px;
+  background-image: linear-gradient(90deg, #6CCA2B 0%, #1883B7 100%);
+  bottom: 15px; 
   position: fixed; 
-  right: 72px; 
+  right: 15px; 
 }
 
 header div {
