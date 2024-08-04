@@ -32,7 +32,7 @@ button {
   bottom: 15px; 
   position: fixed; 
   right: 15px;
-  border: 2px solid #443e54;
+  border: 2px solid #eda216;
   border-radius: 10px;
   padding: 1px;
   transition: transform 0.3s;
@@ -82,7 +82,7 @@ section {
 }
 
 section div {
-  background-color: #2a2634;
+  background-color: #eda216;
   padding: 24px 32px 32px;
   border-radius: 8px;
 }
@@ -93,7 +93,10 @@ section h2 {
 
 section p {
   letter-spacing: -0.18px;
-  color: #a1a1aa;
+  background: linear-gradient(90deg, #6CCA2B 0%, #1883B7 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.4px #443e54;
 }
 
 section ul {
@@ -137,13 +140,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #2a2634;
+  background: #eda216;
 }
 
 body::-webkit-scrollbar-thumb {
   background-image: linear-gradient(45deg, #6CCA2B 0%, #1883B7 100%);
   border-radius: 20px;
-  border: 3px solid #2a2634;
+  border: 3px solid #eda216;
 }
 
 /*animation*/
