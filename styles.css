@@ -100,6 +100,7 @@ main {
   margin: 32px auto;
   display: grid;
   gap: 24px;
+  z-index: 3;
 }
 
 section {
