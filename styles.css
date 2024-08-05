@@ -57,13 +57,41 @@ header div {
   transition: transform 0.3s;
 }
 
+bsideimg1 {
+  bottom: -80px; 
+  position: fixed; 
+  left: -105px;
+  rotate:45deg;
+  display: flex;
+  padding: 4px;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+bsideimg2 {
+  bottom: 60px; 
+  position: fixed; 
+  left: -35px;
+  rotate:10deg;
+  display: flex;
+  padding: 4px;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
 header div:hover {
+  background-image: url(./assets/profile_hover.gif);
+  background-size: 100% auto;
   transform: scale(1.1);
 }
 
 header div img {
   width: 100%;
   border-radius: 50%;
+}
+
+header div img:hover {
+  opacity: 0;
 }
 
 main {
@@ -152,12 +180,19 @@ body::-webkit-scrollbar-thumb {
 /*animation*/
 
 button {
-  animation: fromRight 0.7s 0.2s backwards;
-  animation-delay: 0.4s;
+  animation: fromRight 0.7s 1.6s backwards;
 }
 
 header div {
   animation: fromTop 0.7s 0.2s backwards;
+}
+
+body bsideimg1 {
+  animation: fromPeek 0.7s 1.8s backwards;
+}
+
+body bsideimg2 {
+  animation: fromBigPeek 0.7s 1.8s backwards;
 }
 
 main section {
@@ -177,8 +212,23 @@ main section:nth-child(2) {
 }
 
 main section:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+main section:nth-child(4) {
   animation-delay: 0.8s;
 }
+
+
+main section:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+
+main section:nth-child(6) {
+  animation-delay: 1.4s;
+}
+
 
 @keyframes fromTop {
   from {
@@ -215,6 +265,30 @@ main section:nth-child(3) {
     opacity: 1;
     transform: translateX(0);
     rotate:360deg;
+  }
+}
+
+@keyframes fromPeek {
+  from {
+    opacity: 1;
+    transform: translateY(325px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBigPeek {
+  from {
+    opacity: 1;
+    transform: translateY(415px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
