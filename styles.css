@@ -164,6 +164,10 @@ main section {
   animation: fromLeft 0.7s backwards;
 }
 
+main section div ul li a svg:hover {
+  animation: fromSpin 1.5s backwards;
+}
+
 main section:nth-child(1) {
   animation-delay: 0;
 }
@@ -197,6 +201,20 @@ main section:nth-child(3) {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fromSpin {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+    rotate:0deg;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    rotate:360deg;
   }
 }
 
