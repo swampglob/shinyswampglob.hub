@@ -80,6 +80,26 @@ bsideimg2 {
   z-index: 1;
 }
 
+tsideimg1 {
+  top: -30px; 
+  position: fixed; 
+  right: -200px;
+  display: flex;
+  padding: 4px;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+tsideimg2 {
+  top: 175px; 
+  position: fixed; 
+  right: -55px;
+  display: flex;
+  padding: 4px;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
 header div:hover {
   background-image: url(./assets/profile_hover.gif);
   background-size: 100% auto;
@@ -89,6 +109,14 @@ header div:hover {
 header div img {
   width: 100%;
   border-radius: 50%;
+}
+
+tsideimg1 img {
+  width: 50%;
+}
+
+tsideimg2 img {
+  width: 65%;
 }
 
 header div img:hover {
@@ -193,7 +221,7 @@ body::-webkit-scrollbar-thumb {
 /*animation*/
 
 button {
-  animation: fromRight 0.7s 1.6s backwards;
+  animation: fromRight 0.7s 2s backwards;
 }
 
 header div {
@@ -206,6 +234,14 @@ body bsideimg1 {
 
 body bsideimg2 {
   animation: fromBigPeek 0.7s 1.8s backwards;
+}
+
+body tsideimg1 {
+  animation: fromTopPeek 0.7s 1.6s backwards;
+}
+
+body tsideimg2 {
+  animation: fromTopPeek 0.7s 1.5s backwards;
 }
 
 main section {
@@ -302,6 +338,18 @@ main section:nth-child(6) {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fromTopPeek {
+  from {
+    opacity: 1;
+    transform: translateX(195px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
