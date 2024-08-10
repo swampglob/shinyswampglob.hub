@@ -16,8 +16,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
   </head>
   <body>
-    <button onclick="PlayStop()" type="button">▶</button>
-
+    <button onclick="PlayStop()" type="button" id='PlayStop' class='mybutton'>▶</button>
 
     <audio id="audioID"> <source src="assets/shiny_playlist.mp3"  type="audio/mp3"> 
     </audio>
@@ -31,6 +30,45 @@
     function PlayStop() { 
     return myaudio.paused ? myaudio.play() : myaudio.pause();
 };
+</script>
+
+<button onclick="SkipSong()" type="button" id='SkipSong' class='mybutton'>▶▶</button>
+
+    <script> 
+    function SkipSongA(event) {
+      audio.currentTime = 190.0
+      event.target.onclick = SkipSongB;
+}
+    function SkipSongB(event) {
+      audio.currentTime = 305.0
+      event.target.onclick = SkipSongC;
+}
+    function SkipSongC(event) {
+        audio.currentTime = 410.0
+        event.target.onclick = SkipSongD;
+}
+    function SkipSongD(event) {
+        audio.currentTime = 515.0
+        event.target.onclick = SkipSongE;
+}
+    function SkipSongE() {
+        audio.currentTime = 670.0
+        event.target.onclick = SkipSongF;
+}
+    function SkipSongF(event) {
+        audio.currentTime = 1111.0
+        event.target.onclick = SkipSongG;
+}
+    function SkipSongG(event) {
+        audio.currentTime = 1356.0
+        event.target.onclick = SkipSongH;
+}
+    function SkipSongH(event) {
+        audio.currentTime = 0.0
+        event.target.onclick = SkipSongA;
+};
+
+document.getElementById("SkipSong").onclick = SkipSongA;
 </script>
 
     <header>
@@ -59,14 +97,14 @@
     <tsideimg1>
       <img
         src="assets/catpeek1.png"
-        alt="shinyswampglob cats"
+        alt="Photo portrait Zelda"
       />
     </tsideimg1>
 
     <tsideimg2>
       <img
         src="assets/catpeek2.png"
-        alt="shinyswampglob cats"
+        alt="Photo portrait Luna"
       />
     </tsideimg2>
 
